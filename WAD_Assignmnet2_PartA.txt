@@ -1,0 +1,34 @@
+Assignmnet-2 PartA
+
+First open folder.  inside this folder we'll create one folder using terminal
+for this command is : mkdir PartA
+change the current directory : cd PartA
+
+// Git:It is a popular version control system and it allows us to track code changes and
+    who made the changes in our code and coding in collaboration and also we can manage projects with repositories.
+    It allows to see full time history of every commit and also we can rolled back to previous commit 
+// GitHub:using git GitHub is making tools. both are different. It is wed based interface that uses git
+
+to check whether Git is installed or not:Command: git --version
+ 
+then go to GitHub and create one repository: click on new then give name to repository then give description then click on public then click on create repository
+
+go to vs code terminal: go to the PartA file and create one file give name as file1.txt then add some contents in the file
+
+then we have to initialize repository:Command: git init
+add the file:Command: git add . or git file name
+check the status of the git: git status
+go to GitHub copy the HTTP link come to terminal:Command: git remote add origin "paste the url"
+commit the changes:Command: git commit -m "First Commit"
+check git status:Command: git status
+now push the file:Command: git push -u origin master
+
+similary do for file2
+
+for error:
+git config --global user.email "email id paste it"
+git config --global user.name "name paste it"
+
+
+
+

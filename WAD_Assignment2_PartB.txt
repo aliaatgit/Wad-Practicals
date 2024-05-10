@@ -1,0 +1,30 @@
+WAD_Assignment2_PartB
+Create docker container environment
+
+we have to install the extension named Docker
+
+open folder {while naming make sure that naming folder with lowercase only and no space}
+
+inside folder create file  with docker file : Dockerfile
+Now create one js file with pratiksha.js
+
+inside js file write console command
+console.log("Name: Pratiksha Hake");
+console.log("class: TE");
+console.log("Subject: Web Application Development");
+console.log("Assignment-2B");
+
+then inside the docker file we have to write 3-4 line code
+FROM node:alpine
+COPY . /Partb
+CMD node /Partb/Pratiksha.js
+
+go to terminal
+Command: docker --version
+Command: node pratiksha.js
+
+Command: docker build -t partb .
+
+Command: docker images          
+
+

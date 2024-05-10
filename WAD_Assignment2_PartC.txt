@@ -1,0 +1,83 @@
+WAD_Assignment2_PartC
+
+go to vs code and open folder
+then go to terminal-> new terminal
+Command: npm --version .....{verify nodejs intsalled or not}
+intall angular CLI command:npm install -g @angular/cli@latest
+
+angular is the javascript based frontend web framework it is used for developing single page applications. 
+It uses the html language as the template language
+
+create angular project:Command: ng new partC
+yes
+css
+
+write code in partC: click partc then click src then click app then click app.component.html file:delete all the comtents in the file
+code:
+<h1>{{title}}</h1>
+
+<input type="text" #name placeholder="Enter your Name" name="Name"> <br>
+
+<input type="text" #address placeholder="Enter your Address" name="Address"> <br>
+
+<input type="text" #contact placeholder="Enter your Contact" name="Contact"> <br>
+
+<input type="email" #email placeholder="Enter your Email" name="Email"> <br>
+
+<input type="Password" #Password placeholder="Enter your Password" name="Password"> <br>
+
+<button (click)="getValue(name.value, address.value, contact.value, email.value)"> Register </button>
+
+<h1>Your Register Data</h1>
+
+<p>Name:{{displayname}}</p>
+<p>Address:{{displayaddress}}</p>
+<p>Contact:{{displaycontact}}</p>
+<p>Email:{{displayemail}}</p>
+
+go to app.component.ts file: paste code
+
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
+})
+export class AppComponent {
+  title = 'Registration Form';
+
+  displayname="";
+  displayaddress="";
+  displaycontact="";
+  displayemail="";
+
+  getValue(name:string, address:string, contact:string, email:string){
+    this.displayname=name;
+    this.displayaddress=address;
+    this.displaycontact=contact;
+    this.displayemail=email;
+
+  }
+}
+
+
+save it and then go to terminal and write command to compile program
+Command: ng serve  .......{before running check the directory}for that cd partc command
+y
+then go to the localhost link and open it
+
+then go to the app.component.css file and write code:
+
+input{
+    width:400px;
+    height:250px;
+    margin:10px ;
+    padding:5px ;
+}
+
+ 
+
